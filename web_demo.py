@@ -12,7 +12,7 @@ MAX_BOXES = MAX_TURNS * 2
 def predict(input, max_length, top_p, temperature, history=None):
     if history is None:
         history = []
-    response, history = model.chat(tokenizer, input, history, max_length=max_length, top_p=top_p,
+    response, history = model.chat(tokenizer, input, history=[], max_length=max_length, top_p=top_p,
                                    temperature=temperature)
     updates = []
     for query, response in history:

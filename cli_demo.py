@@ -20,5 +20,5 @@ while True:
         os.system(command)
         print("欢迎使用 ChatGLM-6B 模型，输入内容即可进行对话，clear 清空对话历史，stop 终止程序")
         continue
-    response, history = model.chat(tokenizer, query, history=history)
+    response, history = model.chat(tokenizer, query, history=[])
     print(f"ChatGLM-6B：{response}")
